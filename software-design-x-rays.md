@@ -17,7 +17,7 @@ Interest rate is a function of time
 
 We need a time dimension of code to reason about the tech debt interest rate
 
-Challenge of programming - serving two audiences
+- Challenge of programming - serving two audiences
     - the machine
         - doesn't care about style but is pedantic about content
         - can't fill in the gaps
@@ -25,7 +25,7 @@ Challenge of programming - serving two audiences
         - more elaborate mental processes 
         - needs guidance to use those processes efficiently
 
-As we learn a topic we build mental representations of that domain
+- As we learn a topic we build mental representations of that domain
     - called a *schema*
     - used to describe the way we organize knowledge in our memory and how we use that knowledge for a particular event
     - code is built on schemas
