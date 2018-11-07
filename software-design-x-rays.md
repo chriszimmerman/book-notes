@@ -41,3 +41,12 @@ Readable code is economical code
  - The structure of the development organization is a stronger predictor of defects than any code metrics.
  - The risk that a specific commit introduces a defect increases with the number of developers who have previously worked on the modified code. 
  - These factors affect us even within a strong quality culture of peer reviews. The open source collaboration model isn’t immune to social factors such as parallel development. 
+
+## Mine Your Organization's Collective Intelligence
+- Where's the code with the highest interest rate?
+- Does our architecture support the way our system evolves?
+- Are there any productivity bottlenecks for interteam coordination?
+
+**We can't prioritize technical debt based on the code alone since we lack some critical information, most prominently a time dimension and social information.** We get this from our VCS data.
+
+We know who changed what files when. This lets us generate a knowledge map based on the contributions of each developer. This can be taken further and split up by team. We can identify coordination between teams.
