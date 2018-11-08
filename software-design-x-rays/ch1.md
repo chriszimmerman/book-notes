@@ -50,3 +50,9 @@ Readable code is economical code
 **We can't prioritize technical debt based on the code alone since we lack some critical information, most prominently a time dimension and social information.** We get this from our VCS data.
 
 We know who changed what files when. This lets us generate a knowledge map based on the contributions of each developer. This can be taken further and split up by team. We can identify coordination between teams.
+
+## Prioritize Improvements Guided by Data
+- Prioritizing tech debt requires a time dimension
+- Don't want to refactor a module constantly under development by a crowd of devs
+- Must take social aspect into account
+
