@@ -1,5 +1,3 @@
-# Software Design X-Rays
-
 ## Chapter 1 - Why Technical Debt Isn't Technical
 
 Technical debt - code that’s more expensive to maintain than it should be
