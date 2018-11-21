@@ -46,8 +46,8 @@ People strive to keep production code clean, but don't give the same effort to t
 
 Copy paste detectors are underused in our industry
 
-- For Java & Python - Clone Digger
-- For .NET - Simian
+- For Java & Python - [Clone Digger](https://pypi.org/project/clonedigger/)
+- For .NET - [Simian](https://www.harukizaemon.com/simian/index.html)
 
 For implementing one yourself, check out Rabin-Karp algorithm
 
