@@ -52,3 +52,5 @@ Hotspots help identify the higher priority spots in the code to work on
 Reasons why code grows into hotspots
 - low cohesion
 - they tend to stay where they are and remain problematic for years
+
+[CodeScene](https://codescene.io)
