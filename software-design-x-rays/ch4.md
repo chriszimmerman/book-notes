@@ -64,3 +64,48 @@ With option 2, you can indicate low cohesion by giving the module a name like `D
 - Don't refactor on a separate branch - the key driver behind a splinter refactoring is short lead times
 
 ## Build Temporary Tests as a Saftey Net
+
+- Test coverage is usually inadequate
+- You'll need to build a safety net based on *end-to-end* tests
+- Types of end-to-end tests depend on the API of your hotspot
+
+### Introduce Provisional End-to-end Tests
+
+- Treat code as a black box and just focus on its visibile behavior
+    - Ex. Selenium for web
+    - Ex. Sikuli for UI
+- Results in brittle test suite, but sets us up for next step - refactoring a core part of the system
+- Safety net needs to be temporary, and get rid of it once we meet our goal
+
+- Maintainable Tests Don't Depend on Details
+    - don't depend on details of UI
+    - instead query the DOM, or the identity of a specific component
+
+### Reduce Debt By Deleting Cost Sinks
+
+- Test code not growing with app code is a warning sign
+- Tests not growing with complexity of app code is another warning sign
+- May indicate that a sole developer tried to introduce unit tests but the organization as a whole didn't embrace the change
+    - These sorts of tests do more harm than good since they don't provide much value but still have to be built
+    - Delete them as a cost-saving measure
+
+## Turn Hotspot Methods into Brain-Friendly Chunks
+
+Naming programming constructs ties to our working memory, one of the most limiting factors in programming
+
+Optimizing for programmer understanding is one of the most important choices we make
+
+Ex. Chess masters
+- Chess masters don't recall individual pieces; they recall patterns aka chunks
+
+Ex. Craft.net
+- Reveals accidental complexity - nested loops & complex conditionals
+- Extract each piece into a method stating what it does - these are the "chunks"
+
+Data types are chunks too - replace primitives with types that have meaningful names
+
+## The Curse of a Successful System
+
+Code grows into hotspots because we change it a lot, and those changes are driven by user needs, both real and perceived
+
+
