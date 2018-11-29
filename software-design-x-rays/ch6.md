@@ -62,5 +62,38 @@ This approach allows you to divide and conquer throughout the codebase
 
 ## Fight the Normalization of Deviance
 
+Each time you accept a risk, the deviations become the new normal
 
+Ex. You inherit a file with 15,000 lines of code. Soon it becomes 16,000 because, what's a little bit more? 16,000 becomes 17,000 and so on
 
+### Get a Whistleblower
+
+Calculate complexity trends:
+
+1) Decide upon a sample interval - for example, once per month
+2) Calculate a complexity trend for each file in the logical component with sample points on the dates given by the interval decided in the previous step
+3) Aggregate the individual trends into a single trend
+
+![tipping point](ch6_tipping_point.png "tipping point")
+
+### Communicate with Nontechnical Managers
+
+Start calculating the percentage of commits that involve your top hotspots - 10 to 15 percent is commont - to show your managers how important that code is for your ability to support new features and innovations
+
+Demonstrate that complexity trends will slow your company down
+
+![refactoring](ch6_refactoring.png "refactoring")
+
+Data buys trust
+
+## Toward Team-Oriented Measures
+
+High-level analyses on logical components fill an important role from a communication point of view -> helps nontechnical stakeholders
+
+## Exercises
+
+[Linux](https://codescene.io/projects/1740/jobs/4358/results/code/hotspots/system-map)
+
+[Erlang](https://codescene.io/projects/1707/jobs/4289/results/files/internal-temporal-coupling?file-name=otp/erts/emulator/beam/erl_process.c)
+
+[PhpSpreadsheet](https://codescene.io/projects/1579/jobs/4888/results/scope/system-trends/by-component)
