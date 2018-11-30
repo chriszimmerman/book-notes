@@ -113,3 +113,47 @@ Not silos - a mechanism to counter the diffusion of responsibility
     - others are encouraged to contribute, but owner has final say
 
 ### Provide Broad Knowledge Boundaries
+
+Distinguish *operational boundaries* from *knowledge boundaries* between each team
+
+### Specify a Start Date With Organizational Significance
+
+People move between teams, new teams are formed, and old teams are abandoned
+
+## Analyze Operational Team Boundaries
+
+Teams are usually the coordination unit of interest, not individual developers
+
+**Replace author names with names of teams**
+
+Lets us identify components with excess parallel development
+
+### Introduce New Teams to Take on Shared Responsibilities
+
+Analyze who to make owner by looking at team contributions
+
+## Social Groups: The Flip Side to Conway's Law
+
+### Motivation Losses in Teams
+
+*Social loafing* - motivational loss that may occur when we feel that the success of our team depends little on our actual effort
+
+Minimize social loafing
+- small groups
+- evaluation
+- leadership by example
+- visibility
+
+Don't turn knowledge maps into performance evaluations
+
+### Us and Them: The Perils of Interteam Conflicts
+
+Evaluating your own team and other teams different - *fundamental attribution error*
+
+Make sure that people who work on different but related teams know each other on a personal level
+
+### Coffee As An Organizational Tool
+
+A 15 minute coffee break is the cheapest team-building exercise you'll ever get
+
+## Combine Social and Technical Information
