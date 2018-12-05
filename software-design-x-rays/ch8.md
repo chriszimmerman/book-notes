@@ -64,3 +64,46 @@ You don't need to go full microservice to rescue a legacy codebase
 ![Data, context, and interaction](ch8_dci.png "Data, context, and interaction")
 
 ## Discover Bounded Contexts Through Change Patterns
+
+Change coupling can be used to find *bounded contexts*
+
+Context specific models are preferred over global, shared data model
+
+### Look For Clusters of Cochanging Files
+
+![Domain Driven Design](ch8_ddd.png "Domain Driven Design")
+
+![Choosing A Design](ch8_domains.png "Choosing a Design")
+
+## The Perils of Feature Teams
+
+Ex. 12 different teams had to work across all components
+
+### Build Team Knowledge Maps
+
+Based on amount of code contributed by each team within analysis period
+
+![Knowledge map](ch8_knowledge_map.png "Knowledge map")
+
+### Not All Teams Are Equal
+
+Dangers of a "maintenance team"
+- Motivation loss
+- Low in-group cohesion - work is reactive and spread across unrelated bug fixes
+- Broken feedback loops - bugs provide an opportunity to learn for the implementing team; when they rush to the next feature, they miss out on this
+- Blurred lines - invitation to diffusion of responsibility
+
+Common response is "gatekeeper" or "architect"
+- *Amdahl's law* - theoretical speedup is limited by the serial part of the program
+    - Gatekeep acts as serial part
+- Code-reviewer fatigue becomes real
+
+Let each team act as the gatekeeper of its own code
+
+Your teams will never become cross-functional if they depend on someone else to approve their code
+
+## Exercises
+
+[nopCommerce](https://codescene.io/projects/1593/jobs/3920/results/code/temporal-coupling/by-commits)
+
+[PhpSpreadsheet](https://codescene.io/projects/1579/jobs/3839/results/code/temporal-coupling/by-commits)
