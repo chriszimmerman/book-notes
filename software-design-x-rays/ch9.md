@@ -25,7 +25,7 @@ Looking at lines of code along with change frequency allows us to analyze micros
 
 `git rev-list --count HEAD` - a shorthand command to aggregate all contributions to a repo
 
-![Recommendations service findings](ch9_recommendations.png "Recommendations service findings")
+![Recommendations service findings](images/images/ch9_recommendations.png "Recommendations service findings")
 
 ### React to Your Findings
 
@@ -50,7 +50,7 @@ Hotspot maps make great visuals when communicating with nontechnical managers
 
 ## Track Change Patterns in Distributed Systems
 
-![Dependencies between systems](ch9_dependencies.png "Dependencies between systems")
+![Dependencies between systems](images/ch9_dependencies.png "Dependencies between systems")
 
 ### Use Logical Change Sets to Group Commits
 
@@ -77,7 +77,7 @@ Ways to reduce conflict:
 
 Coupling between microservices is basically shotgun surgery on an architectural scale
 
-![Shotgun surgery](ch9_ss.png "Shotgun surgery")
+![Shotgun surgery](images/ch9_ss.png "Shotgun surgery")
 
 Root causes for microservices shotgun surgery:
 1) Services share code that itself isn't stable from an evolutionary POV

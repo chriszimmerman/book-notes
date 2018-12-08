@@ -15,7 +15,7 @@ Advantages to this:
 
 ### Calculate the Age of Code
 
-![get git log data from a certain date](ch5_git_commands.png "get git log data from a certain date")
+![get git log data from a certain date](images/ch5_git_commands.png "get git log data from a certain date")
 
 ## Three Generations of Code
 
@@ -25,7 +25,7 @@ Hermann Ebbinghaus - discovered we tend to forget things at an exponential rate
 
 Ebbinghaus forgetting curve
 
-![Ebbinghaus forgetting curve](ch5_ebbinghaus.png "Ebbinghaus forgetting curve")
+![Ebbinghaus forgetting curve](images/ch5_ebbinghaus.png "Ebbinghaus forgetting curve")
 
 Each time we revisit mid-age code, we need to relear its inner workings
 

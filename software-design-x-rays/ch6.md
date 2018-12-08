@@ -36,7 +36,7 @@ Social analyses on a subsystem level benefit a larger organization better
 
 ### A Language for Specifying Architectural Boundaries
 
-![hotspots](ch6_hotspots.png "hotspots")
+![hotspots](images/ch6_hotspots.png "hotspots")
 
 ### Summarize Change Frequencies By Component
 
@@ -74,7 +74,7 @@ Calculate complexity trends:
 2) Calculate a complexity trend for each file in the logical component with sample points on the dates given by the interval decided in the previous step
 3) Aggregate the individual trends into a single trend
 
-![tipping point](ch6_tipping_point.png "tipping point")
+![tipping point](images/ch6_tipping_point.png "tipping point")
 
 ### Communicate with Nontechnical Managers
 
@@ -82,7 +82,7 @@ Start calculating the percentage of commits that involve your top hotspots - 10 
 
 Demonstrate that complexity trends will slow your company down
 
-![refactoring](ch6_refactoring.png "refactoring")
+![refactoring](images/ch6_refactoring.png "refactoring")
 
 Data buys trust
 

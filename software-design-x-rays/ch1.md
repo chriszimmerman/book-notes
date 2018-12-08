@@ -29,7 +29,7 @@ We need a time dimension of code to reason about the tech debt interest rate
     - code is built on schemas
     - schemas represent your domain expertise
 
-![this hits home](ch_1_hits_home.png "this hits home")
+![this hits home](images/ch_1_hits_home.png "this hits home")
 
 Readable code is economical code
 

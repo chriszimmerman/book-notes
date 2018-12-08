@@ -27,7 +27,7 @@ Modularity alone doesn't guarantee success
     - All teams work in all areas of the code at the same time, or
     - Each team "owns" components, which requires massive coordination
 
-![teams](ch7_teams.png "teams")
+![teams](images/ch7_teams.png "teams")
 
 *Congruence* - means that actual coordination needs are matched with appropriate coordination actions
 
@@ -54,17 +54,17 @@ Ex. Intel graphics driver
         - Unfamiliarity with code/domain
         - Inconsistent style from newcomers
 
-![contributors](ch7_contributors.png "contributors")
+![contributors](images/ch7_contributors.png "contributors")
 
 ### Rank Code By Diffusion
 
 Fractal value analysis
 
-![fractal](ch7_fractal.png "fractal")
+![fractal](images/ch7_fractal.png "fractal")
 
 Diffusion example:
 
-![diffusion](ch7_diffusion.png "diffusion")
+![diffusion](images/ch7_diffusion.png "diffusion")
 
 ### React to Developer Fragmentation
 

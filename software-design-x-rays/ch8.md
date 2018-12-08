@@ -23,9 +23,9 @@ Layered architectures -> increased coordination needs
 
 ### Change Patterns In Layered Architectures
 
-![components](ch8_components.png "components")
+![components](images/ch8_components.png "components")
 
-![coupling](ch8_coupling.png "coupling")
+![coupling](images/ch8_coupling.png "coupling")
 
 ### A Separation of Concerns That Concern
 
@@ -46,14 +46,14 @@ You don't need to go full microservice to rescue a legacy codebase
 - Make components an architectural building block that contains application logic and data-access logic, if needed
 - Presentation layers and APIs are then built on top of the components
 
-![Package by Component](ch8_pbc.png "Package by Component")
+![Package by Component](images/ch8_pbc.png "Package by Component")
 
 *Package by feature*
 - Domain-oriented approach
 - Each user-facing feature becomes a high-level building block
 - UI is part of each feature, unlike in *Package by component*
 
-![Package by Feature](ch8_pbf.png "Package by Feature")
+![Package by Feature](images/ch8_pbf.png "Package by Feature")
 
 *Data, context, and interaction*
 - Clear separation between data/domain model (what the system is) and its features (what the system does)
@@ -61,7 +61,7 @@ You don't need to go full microservice to rescue a legacy codebase
     -Expressed in *object roles*
     - Differnt use cases express their context by combining specific object roles
 
-![Data, context, and interaction](ch8_dci.png "Data, context, and interaction")
+![Data, context, and interaction](images/ch8_dci.png "Data, context, and interaction")
 
 ## Discover Bounded Contexts Through Change Patterns
 
@@ -71,9 +71,9 @@ Context specific models are preferred over global, shared data model
 
 ### Look For Clusters of Cochanging Files
 
-![Domain Driven Design](ch8_ddd.png "Domain Driven Design")
+![Domain Driven Design](images/ch8_ddd.png "Domain Driven Design")
 
-![Choosing A Design](ch8_domains.png "Choosing a Design")
+![Choosing A Design](images/ch8_domains.png "Choosing a Design")
 
 ## The Perils of Feature Teams
 
@@ -83,7 +83,7 @@ Ex. 12 different teams had to work across all components
 
 Based on amount of code contributed by each team within analysis period
 
-![Knowledge map](ch8_knowledge_map.png "Knowledge map")
+![Knowledge map](images/ch8_knowledge_map.png "Knowledge map")
 
 ### Not All Teams Are Equal
 
