@@ -43,3 +43,49 @@ How to do this
 One of the most important features for anything - the `undo` key
 
 A Version Control System (VCS) is like a giant `undo` key
+
+Always use version control
+
+## Debugging
+
+Fix the problem, not the blame
+
+**Don't panic** - debugging is just problem solving. Attack it as such.
+
+The best way to start fixing a bug is to first reproduce it.
+
+Write a failing test before fixing the code
+
+Read the damn error message
+
+### Use the binary chop
+
+Use a divide and conquer approach to find the problem
+- If a stacktrace is massive, start halfway through and see if the error is there
+- If you find bugs on certain datasets, split the dataset in two
+- If a bug was introduced in a set of releases, go back to a release halfway between now and the last known working version
+
+### Using logging & tracing
+
+The debugger shows what's going on *now*
+
+Logs and traces can record what happens at certain points
+
+### Rubber ducking
+
+Explain the problem to another person, or an inanimate object
+
+### Don't assume it - prove it
+
+## Text Manipulation
+
+### Learn a text manipulation language
+
+## Engineering Daybooks
+
+Have a book and record:
+- what you do
+- what you learn
+- sketches of ideas
+- anything else related to work
+- notes in meetings
