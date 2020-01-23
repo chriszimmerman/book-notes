@@ -30,6 +30,10 @@ Dependencies are transitive
 
 The Composition Root pattern applies to all applications developed using DI, but only startup projects will have a Composition Root. A Composition Root is the result of removing the responsibility for the creation of Dependencies from consumers. To achieve this, you can apply two patterns: Constructor Injection and Property Injection. Constructor Injection is the most common and should be used almost exclusively.
 
+![Loosely coupled](ch4_1.png "Comparing the dependency graph of Mary’s application to that of the loosely coupled application")
+
+![Tightly coupled](ch4_2.png "The dependencies between the libraries in Mary’s application")
+
 ## Constructor Injection
 
 **Definition** -  *Constructor Injection* is the act of statically defining the list of required Dependencies by specifying them as parameters to the class’s constructor. 
