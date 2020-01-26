@@ -77,3 +77,47 @@ public class ProductService : IProductService
 
 ## Service Locator
 
+**DEFINITION** - A Service Locator supplies application components outside the Composition Root with access to an unbounded set of Volatile Dependencies.
+
+As it’s most commonly implemented, the Service Locator is a Static Factory that can be configured with concrete services before the first consumer begins to use it.
+
+```
+public class HomeController : Controller { }
+
+public HomeController() { }
+
+public ViewResult Index()
+{
+  IProductService service = Locator.GetService<IProductService>();
+  var products = service.GetFeaturedProducts();
+
+  return this.View(products);
+}
+```
+
+![Service Locator](ch5_2.png "Service Locator")
+
+
+### Analysis of Service Locator
+
+Service Locator is a dangerous pattern because it almost works. You can locate Dependencies from consuming classes, and you can replace those Dependencies with different implementations—even with Test Doubles from unit tests. 
+
+### Negative Effects of Service Locator
+
+The main problem with Service Locator is that it impacts the reusability of the classes consuming it. This manifests itself in two ways:
+  - The class drags along the Service Locator as a redundant Dependency.
+  - The class makes it non-obvious what its Dependencies are.
+
+The ProductService class is far from self documenting: you can’t tell which Dependencies must be present before it’ll work. In fact, the developers of ProductService may even decide to add more Dependencies in future versions. That would mean that the code that works for the current version can fail in a future version, and you aren’t going to get a compiler error that warns you. Service Locator makes it easy to inad- vertently introduce breaking changes.
+
+When unit testing, you have the additional problem that a Test Double registered in one test case will lead to the Interdependent Tests code smell, because it remains in memory when the next test case is executed. It’s therefore necessary to perform Fixture Teardown after every test by invoking Locator.Reset().8 This is something that you must manually remember to do, and it’s easy to forget.
+
+A Service Locator may seem innocuous, but it can lead to all sorts of nasty runtime errors. How do you avoid those problems? When you decide to get rid of a Service Locator, you need to find a way to do it. As always, the default approach should be Constructor Injection, unless one of the other DI patterns from chapter 4 provides a better fit.
+
+### Refactoring away from Service Locator
+
+In many cases, a class that consumes a Service Locator may have calls to it spread throughout its code base. In such cases, it acts as a replacement for the new statement. When this is so, the first refactoring step is to consolidate the creation of each Depen- dency in a single method.
+
+If you don’t have a member field to hold an instance of the Dependency, you can introduce such a field and make sure the rest of the code uses this field when it con- sumes the Dependency. Mark the field readonly to ensure that it can’t be modified out- side the constructor. Doing so forces you to assign the field from the constructor using the Service Locator. You can now introduce a constructor parameter that assigns the field instead of the Service Locator, which can then be removed.
+
+Introducing a Dependency parameter to a constructor is likely to break existing consumers, so it’s best to start with the top-most classes and work your way down the Dependency graph.
