@@ -66,3 +66,33 @@ This doesn’t mean that classes shouldn’t implement IDisposable. What this do
 
 The Proxy design pattern provides a surrogate or placeholder for another object to control access to it. It allows deferring the full cost of its creation and initialization until you need to use it. A Proxy implements the same interface as the object it’s surrogate for. It makes consumers believe they’re talking to the real implementation.
 
+### Abusing Abstract Factories to select dependencies based on runtime data
+
+![Abstract Factory](ch6_1.png "Abstract Factory")
+
+In chapter 3 (section 3.1.2), we talked about the Dependency Inversion Principle. We discussed how it states that **Abstractions should be owned by the layer using the Abstraction**. We explained that **it’s the consumer of the Abstraction that should dictate its shape and define the Abstraction in a way that suits its needs the most**. When we go back to our RouteController and ask ourselves whether this is the design that suits RouteController the best, we’d argue that this design doesn’t suit RouteController.
+
+By refactoring from Abstract Factory to an Adapter, you effectively reduce the num- ber of Dependencies between your components. Figure 6.10 shows the Dependency graph of the initial solution using the Factory, while figure 6.11 shows the object graph after refactoring.
+
+
+![Abstract Factory Refactoring](ch6_2.png "Abstract Factory Refactoring")
+
+## Fixing Cyclic Dependencies
+
+Dependency cycles are typically caused by an SRP violation.
+
+![Cyclic Dependency Example](ch6_3.png "Cyclic Dependency Example")
+
+**NOTE** - Ever-changing Abstractions are a strong indication of SRP violations. This also relates to the Open/Closed Principle (OCP) as discussed in chap- ter 4, which states that you should be able to add features without having to change existing classes.
+
+**NOTE** - The more methods a class has, the higher the chance it violates the Single Responsibility Principle. This is also related to the Interface Segregation Principle, which prefers narrow interfaces.
+
+![Cyclic Dependency Example Solution](ch6_4.png "Cyclic Dependency Example Solution")
+
+The most common cause of Dependency cycles is an SRP violation. Fixing the viola- tion by breaking classes into smaller, more focused classes is typically a good solution, but there are also other strategies for breaking Dependency cycles.
+
+![Strategies for Breaking Cyclic Dependencies](ch6_5.png "Strategies for Breaking Cyclic Dependencies")
+
+**WARNING** - Only resort to solving cycles by using Property Injection as a last- ditch effort. It only treats the symptoms instead of curing the illness.
+
+Always keep in mind that the best way to address a cycle is to redesign the API so that the cycle disappears. But in the rare cases where this is impossible or highly undesir- able, you must break the cycle by using Property Injection in at least one place. This enables you to compose the rest of the object graph apart from the Dependency associated with the property. When the rest of the object graph is fully populated, you can inject the appropriate instance via the property. Property Injection signals that a Dependency is optional, so you shouldn’t make the change lightly.
