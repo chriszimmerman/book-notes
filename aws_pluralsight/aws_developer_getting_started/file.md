@@ -12,3 +12,32 @@ EC2 - service that provides servers for your app
     - .NET, Ruby, iOS, JS, Java, etc. 
   
 AWS access key gives access for SDK and CLI
+
+`aws configure` will allow you to use an access key on the CLI
+
+`aws ec2 describe-instances`
+
+## CloudWatch
+
+Lets you set alarms for various thresholds
+- billing estimates
+- DB usage
+- CPU usage
+
+## Simple Notification Service
+
+Topic -> unique amazon resource name
+
+IAM -> Access Management
+- passwords
+- multi-factor auth
+- access keys
+- SSH keys
+
+IAM Policy - collection of permissions for access to various services
+
+## Policies
+
+Effect - "Allow" or "Deny"
+Action - what the user can do
+Resource - thing action is performed on
