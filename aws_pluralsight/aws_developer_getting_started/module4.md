@@ -37,3 +37,23 @@ Custom AMIs can be used
 Auto Scaling Group - Expands or shrinks a pool of instances based on pre-defined rules
 
 Load Balancer - Routing appliance that maintains a consistent DNS entry and balances requests to multiple instances
+
+## S3
+
+Stores objects (files)
+Stores objects in region you specify
+
+An object is basically a file and metadata
+
+Objects are uniquely identified in s3 via their key:
+- path
+- filename (excluding bucket name)
+
+Cross-region replication can solve latency issues or increase redundancy of data (CloudFront is better for latency)
+
+Buckets have permissions
+
+Policies can be configured for S3 buckets
+
+The AWS CLI has the permissions given to the user whose key is configured on your system
+
