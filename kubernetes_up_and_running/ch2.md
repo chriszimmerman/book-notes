@@ -1,4 +1,10 @@
-# Chapter 2 - Docker Image format
+# Chapter 2 - Creating and Running Containers
+
+*Container image* - binary package that encapsulates all of the files necessary to run a program inside of an OS container
+
+Container registries store images
+
+Docker filesystem
 
 Overlay filesystem - each layer adds, removes, or modifies files from the preceding layer in the filesystem
 
